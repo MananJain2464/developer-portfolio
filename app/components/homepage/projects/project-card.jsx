@@ -61,6 +61,18 @@ function ProjectCard({ project }) {
             <span className="text-cyan-400">{' ' + project.description}</span>
             <span className="text-gray-400">,</span>
           </div>
+          <div className="ml-4 lg:ml-8 mr-2">
+            <span className="text-white">
+              <a
+                  href={project.code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#16f2b3] underline hover:text-[#13d6a0] transition"
+                >
+                View Code
+                </a>
+            </span>
+          </div>
           <div><span className="text-gray-400">{`};`}</span></div>
         </code>
       </div>

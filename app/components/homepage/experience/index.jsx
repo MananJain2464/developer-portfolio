@@ -22,7 +22,7 @@ function Experience() {
         <div className="flex  items-center">
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
           <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Experiences
+            Hackathons & Position of Responsibility
           </span>
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
         </div>
@@ -42,6 +42,12 @@ function Experience() {
                 experiences.map(experience => (
                   <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
                     <div className="p-3 relative">
+                      <a
+                        href={experience.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block p-3 relative"
+                      >
                       <Image
                         src="/blur-23.svg"
                         alt="Hero"
@@ -67,6 +73,7 @@ function Experience() {
                           </p>
                         </div>
                       </div>
+                      </a>
                     </div>
                   </GlowCard>
                 ))

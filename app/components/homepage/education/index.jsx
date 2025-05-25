@@ -46,6 +46,12 @@ function Education() {
                 educations.map(education => (
                   <GlowCard key={education.id} identifier={`education-${education.id}`}>
                     <div className="p-3 relative text-white">
+                      <a
+                            href={education.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block p-5 relative">
+                            
                       <Image
                         src="/blur-23.svg"
                         alt="Hero"
@@ -53,6 +59,7 @@ function Education() {
                         height={200}
                         className="absolute bottom-0 opacity-80"
                       />
+                      </a>
                       <div className="flex justify-center">
                         <p className="text-xs sm:text-sm text-[#16f2b3]">
                           {education.duration}
@@ -66,7 +73,13 @@ function Education() {
                           <p className="text-base sm:text-xl mb-2 font-medium uppercase">
                             {education.title}
                           </p>
-                          <p className="text-sm sm:text-base">{education.institution}</p>
+                          <a
+                            href={education.institute_link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block p-3 relative">
+                            <p className="text-sm sm:text-base">{education.institution}</p>
+                          </a>  
                         </div>
                       </div>
                     </div>
